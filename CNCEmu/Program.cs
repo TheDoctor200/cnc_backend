@@ -19,12 +19,14 @@ namespace CNCEmu
 
             // Start built-in webserver
             var webServer = new WebServer("http://localhost:8080/");
+            webServer.AddRoute("/status", req => "<html><body>Status: OK</body></html>");
             webServer.Start();
+
+            Application.ApplicationExit += (s, e) => webServer.Stop();
 
             Application.Run(new Form1());
 
-            // Optionally stop the webserver on exit
-            webServer.Stop();
+            // No need to call webServer.Stop() here, handled by ApplicationExit
         }
     }
 }
