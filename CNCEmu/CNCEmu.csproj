@@ -114,6 +114,7 @@
     <Compile Include="ProviderInfo.cs" />
     <Compile Include="RedirectorServer.cs" />
     <Compile Include="Utils.cs" />
+    <Compile Include="WebServer.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <SubType>Designer</SubType>

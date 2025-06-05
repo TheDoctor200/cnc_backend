@@ -16,7 +16,15 @@ namespace CNCEmu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Start built-in webserver
+            var webServer = new WebServer("http://localhost:8080/");
+            webServer.Start();
+
             Application.Run(new Form1());
+
+            // Optionally stop the webserver on exit
+            webServer.Stop();
         }
     }
 }
