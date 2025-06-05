@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>CNCEmu</RootNamespace>
     <AssemblyName>CNCEmu</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -167,7 +168,7 @@
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
-	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-		<Exec Command="&quot;$(DevEnvDir)\..\..\Common7\IDE\TextTransform.exe&quot; &quot;$(ProjectDir)Properties\AssemblyInfo.tt&quot;" />
-	</Target>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(DevEnvDir)\..\..\Common7\IDE\TextTransform.exe&quot; &quot;$(ProjectDir)Properties\AssemblyInfo.tt&quot;" />
+  </Target>
 </Project>
